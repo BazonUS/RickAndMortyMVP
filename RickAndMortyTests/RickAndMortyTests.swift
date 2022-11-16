@@ -9,7 +9,7 @@ import XCTest
 @testable import RickAndMorty
 
 class MockView: MainViewProtocol {
-    func succes() {
+    func success(with characters: [RickAndMorty.CharacterModel]) {
     }
     
     func failure(error: Error) {

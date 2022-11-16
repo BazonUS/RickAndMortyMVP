@@ -28,25 +28,3 @@ class NetworkService: NetworkServiceProtocol {
     }
 }
 
-// URLSession
-
-//func requestData(completion: @escaping (Result<AllChar?, Error>) -> ()) {
-//   let urlString = "https://rickandmortyapi.com/api/character"
-//    guard let url = URL(string: urlString) else { return }
-//
-//    URLSession.shared.dataTask(with: url) {data, response, error in
-//        if let error = error {
-//            completion(.failure(error))
-//            return
-//        }
-//
-//        guard let data = data else {return}
-//
-//        do {
-//            let obj = try JSONDecoder().decode(AllChar.self, from: data)
-//            completion(.success(obj))
-//        } catch {
-//            completion(.failure(error))
-//        }
-//    }.resume()
-//}

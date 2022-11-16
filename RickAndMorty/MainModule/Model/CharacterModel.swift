@@ -7,19 +7,19 @@
 
 import Foundation
 
-class AllChar: Codable {
+struct AllChar: Codable {
     let info: Info
     var results: [CharacterModel]
 }
 
-class Info: Codable {
+struct Info: Codable {
     let count: Int
     let pages: Int
     let next: String?
     let prev: String?
 }
 
-class CharacterModel: Codable, Hashable {
+struct CharacterModel: Codable, Hashable {
     
     var id: Int
     var name: String
@@ -35,11 +35,11 @@ class CharacterModel: Codable, Hashable {
     var created: String
     
     static func == (lhs: CharacterModel, rhs: CharacterModel) -> Bool {
-        return lhs.status == rhs.status
+        return lhs.id == rhs.id
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(status)
+        hasher.combine(id)
     }
 }
 
